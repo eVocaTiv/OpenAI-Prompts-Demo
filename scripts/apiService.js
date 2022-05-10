@@ -11,7 +11,7 @@ async function fetchPromptResponse(prompt) {
     headers: {
       "Content-Type": "application/json",
       Authorization:
-        "Bearer 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", // TODO: Move key to secret.
+        "Bearer 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", // TODO: Move key to secret.
     },
     body: JSON.stringify(promptRequest),
   })

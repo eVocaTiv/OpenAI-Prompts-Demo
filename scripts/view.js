@@ -4,6 +4,7 @@ const viewElements = {
   responses: document.querySelector(".prompts__responses"),
   quickPrompts: document.querySelector(".prompts__form__quick-prompts"),
   textArea: document.querySelector(".prompts__form__input"),
+  responsesClearBtn: document.querySelector(".prompts__responses__clear-btn"),
 };
 
 function addPromptResponse(promptText, { choices }) {
