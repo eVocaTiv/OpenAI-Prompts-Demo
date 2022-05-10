@@ -1,0 +1,44 @@
+.prompts {
+  width: 60%;
+  margin: 0px auto;
+}
+
+.prompts__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.prompts__form__input {
+  height: 30vh;
+}
+
+.prompts__form__submit-btn,
+.prompts__form__quick-prompt {
+  width: 20%;
+  border-radius: 3px;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  padding: 5px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.prompts__form__submit-btn:focus-visible, /* to maintain accessibility via keyboard focus */
+  .prompts__form__quick-prompt:focus-visible {
+  outline: 2px solid var(--darkBorderColor);
+  outline-offset: 2px;
+}
+
+.prompts__form__submit-btn {
+  align-self: flex-end;
+  background-color: var(--primaryCTA);
+  color: var(--primaryFontColor);
+}
+.prompts__form__quick-prompt {
+  border: 0.5px dotted var(--darkBorderColor);
+}
+
+.prompts__form__quick-prompt {
+  margin: 10px;
+}

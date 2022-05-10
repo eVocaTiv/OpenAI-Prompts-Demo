@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="main.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Kunal Dewan" />
+    <title>OpenAI Prompts Demo - Shopify Front-End Challenge Fall 2022</title>
+  </head>
+  <body>
+    <main>
+      <section class="prompts">
+        <h2>Fun with AI</h2>
+        <form class="prompts__form">
+          <label for="prompts__form__input">
+            <strong>Enter Prompt</strong></label
+          >
+          <textarea
+            name="prompts__form__input"
+            class="prompts__form__input"
+            id="prompts__form__input"
+          ></textarea>
+          <button class="prompts__form__submit-btn" type="submit">
+            Submit
+          </button>
+        </form>
+        <div class="prompts__form__quick-prompts">
+          <h3>Quick prompts</h3>
+          <button
+            aria-controls="prompts__form__input"
+            class="prompts__form__quick-prompt prompts__form__quick-prompt__1"
+          >
+            Write a tagline for an ice cream shop.
+          </button>
+          <button
+            aria-controls="prompts__form__input"
+            class="prompts__form__quick-prompt prompts__form__quick-prompt__2"
+          >
+            What car would you rather own?
+          </button>
+          <button
+            aria-controls="prompts__form__input"
+            class="prompts__form__quick-prompt prompts__form__quick-prompt__3"
+          >
+            Pick a color between red and green.
+          </button>
+        </div>
+        <div class="prompts__responses-container">
+          <h3>Responses</h3>
+          <ul aria-live="polite" class="prompts__responses">
+            <!-- rendered via JS -->
+          </ul>
+        </div>
+      </section>
+    </main>
+    <aside>
+      <!-- TODO: Add linkedin and other contact details. -->
+    </aside>
+    <script type="module" src="clientController.js"></script>
+  </body>
+</html>

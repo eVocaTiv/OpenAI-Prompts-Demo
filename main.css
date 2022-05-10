@@ -1,0 +1,18 @@
+@import url(styles/response.css);
+@import url(styles/promptsForm.css);
+
+:root {
+  --primaryCTA: #0043c8;
+  --whiteBG: whitesmoke;
+  --darkBorderColor: black;
+  --primaryFontColor: white;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+label {
+  font-size: 12px;
+}
+

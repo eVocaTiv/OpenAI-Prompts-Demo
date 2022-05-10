@@ -1,0 +1,16 @@
+.prompts__responses-container {
+  margin-top: 5vh;
+}
+
+.prompts__response {
+  background-color: var(--whiteBG);
+  list-style: none;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.prompts__response__content {
+  margin: 3px 0;
+  padding: 5px;
+}
