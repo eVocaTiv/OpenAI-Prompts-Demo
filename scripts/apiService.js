@@ -1,4 +1,4 @@
-import { apiConstants } from "./constants.js";
+import { apiConstants, key } from "./constants.js";
 
 async function fetchPromptResponse(prompt) {
   const promptRequest = {
@@ -12,7 +12,7 @@ async function fetchPromptResponse(prompt) {
       "Content-Type": "application/json",
       "Content-Encoding": "gzip", // optimize network latency for textual data.
       Authorization:
-        "Bearer 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", // TODO: Move key to secret.
+        `Bearer ${key}`, // TODO: Move key to secret.
     },
     body: JSON.stringify(promptRequest),
   })

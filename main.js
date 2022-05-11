@@ -19,7 +19,7 @@ function onFormSubmit() {
       addPromptResponse(prompt, response);
       updateResponseInLocalStorage(prompt, response.choices[0].text);
     })
-    .catch((err) => console.log("there is an error", err)); // TODO change to graceful handling.
+    .catch((err) => console.error("there is an error", err)); // TODO change to graceful handling.
 }
 
 function onQuickPromptClick(ev) {
@@ -33,7 +33,7 @@ function onQuickPromptClick(ev) {
           response.choices[0].text
         );
       })
-      .catch((err) => console.log("there is an error", err)); // TODO change to graceful handling.
+      .catch((err) => console.error("there is an error", err)); // TODO change to graceful handling.
 }
 
 // Initialize app once using IIFE.
@@ -61,7 +61,6 @@ function onQuickPromptClick(ev) {
 
   // Restore stored responses from local storage, so they survive browser close and page refresh.
   const storedResponses = restoreResponsesFromLocalStorage();
-  console.log("stored", storedResponses);
   storedResponses.forEach(({ promptText, responseText }) => {
     const prompt = promptText;
     const choices = [{ text: responseText }];
