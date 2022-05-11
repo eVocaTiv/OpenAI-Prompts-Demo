@@ -3,7 +3,7 @@ This is my attempt of the Front End Developer Intern Challenge based on fetching
 
 ### Features & Notes
 - Responses to prompts are displayed in a new-first order with background color transition depicting that.
-- The client side HTML is accessible using native tags and aria attributes wherever useful, making it easy to use through screen reader and boosting SEO stats.
+- The client side HTML is accessible using native tags, aria attributes and appropriate focus indicators wherever useful, making it easy to use through screen reader and boosting SEO stats.
 - The API key is stored on server side through Netlify's deployment.
 - The responses are cached in the localStorage, and therefore survive page refresh and browser closing.
 - A clear button is provided to clear the display as well as the localStorage of stored responses.
