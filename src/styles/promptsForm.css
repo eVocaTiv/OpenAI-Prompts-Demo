@@ -60,6 +60,7 @@
 
 .prompts__error-toast {
   background-color: lightcoral;
+  z-index: 1;
 }
 
 .prompts__error-toast::before {
@@ -68,6 +69,7 @@
 
 .prompts__loading-toast {
   background-color: lightblue;
+  z-index: 2 
 }
 
 .prompts__loading-toast::before {
