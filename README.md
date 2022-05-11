@@ -15,7 +15,7 @@ This is my attempt of the Front End Developer Intern Challenge based on fetching
 
 ### Performance
 - Since we deal with textual data, it has been compressed using GZip via HTTP headers.
-- We hide and show loading/error toasts (keep them in the DOM) instead of using display: none to avoid reflows.
+- We hide and show loading/error toasts (keep them in the DOM with absolute positioning) instead of using display: none to avoid reflows.
 - The api fetching logic is throttled with a cooldown time of 300ms to avoid traffic spam on the api endpoint.
 - When clearing all responses from the localStorage as well as the display, we eliminate children of the response list using .lastChild which takes
 O(1) time to remove 1 child as opposed to .firstChild.
