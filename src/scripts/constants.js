@@ -6,6 +6,8 @@ const apiConstants = {
   presence_penalty: 0.0,
 };
 
-const key = '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';
+const key = fetch(`../../.netlify/functions/fetch-api-key`)
+  .then((res) => res.json())
+  .then((body) => body.secretMessage);
 
 export { apiConstants, key };

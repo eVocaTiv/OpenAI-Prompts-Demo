@@ -5,6 +5,7 @@ async function fetchPromptResponse(prompt) {
     prompt,
     ...apiConstants,
   };
+  const apiKey = await key;
 
   return fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
     method: "POST",
@@ -12,7 +13,7 @@ async function fetchPromptResponse(prompt) {
       "Content-Type": "application/json",
       "Content-Encoding": "gzip", // optimize network latency for textual data.
       Authorization:
-        `Bearer ${key}`, // TODO: Move key to secret.
+        `Bearer ${apiKey}`, // TODO: Move key to secret.
     },
     body: JSON.stringify(promptRequest),
   })

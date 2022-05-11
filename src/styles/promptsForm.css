@@ -35,11 +35,13 @@
   background-color: var(--primaryCTA);
   color: var(--primaryFontColor);
 }
-.prompts__form__quick-prompt {
-  border: 0.5px dotted var(--darkBorderColor);
+
+.prompts__form__quick-prompts {
+  display: flex;
 }
 
 .prompts__form__quick-prompt {
+  border: 0.5px dotted var(--darkBorderColor);
   margin: 10px;
 }
 
