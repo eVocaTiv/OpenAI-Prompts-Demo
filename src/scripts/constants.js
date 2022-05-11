@@ -6,7 +6,7 @@ const apiConstants = {
   presence_penalty: 0.0,
 };
 
-const key = fetch(`../../.netlify/functions/fetch-api-key`)
+const key = fetch(`../../.netlify/functions/fetch-api-key`) // return Promise
   .then((res) => res.json())
   .then((body) => body.secretMessage);
 

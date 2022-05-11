@@ -13,7 +13,7 @@ async function fetchPromptResponse(prompt) {
       "Content-Type": "application/json",
       "Content-Encoding": "gzip", // optimize network latency for textual data.
       Authorization:
-        `Bearer ${apiKey}`, // TODO: Move key to secret.
+        `Bearer ${apiKey}`,
     },
     body: JSON.stringify(promptRequest),
   })
