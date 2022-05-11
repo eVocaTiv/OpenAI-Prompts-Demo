@@ -3,16 +3,23 @@
 
 :root {
   --primaryCTA: #0043c8;
-  --whiteBG: whitesmoke;
+  --beigeBG: beige;
   --darkBorderColor: black;
   --primaryFontColor: white;
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Monospace, serif;
 }
 
 label {
   font-size: 12px;
+}
+
+footer {
+  position: absolute;
+  top: 20vh;
+  left: 80%;
+  transform: rotate(90deg);
 }
 

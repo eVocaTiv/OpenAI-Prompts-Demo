@@ -45,23 +45,34 @@
           >
             Pick a color between red and green.
           </button>
+          <button
+          aria-controls="prompts__form__input"
+          class="prompts__form__quick-prompt prompts__form__quick-prompt-4"
+        >
+         How on earth do I open this can of tuna?
+        </button>
         </div>
         <div class="prompts__responses-container">
           <h3>Responses</h3>
-          <button
-            class="prompts__responses__clear-btn"
-          >
-            Clear Responses
-          </button>
+          <button class="prompts__responses__clear-btn">Clear Responses</button>
           <ul aria-live="polite" class="prompts__responses">
             <!-- rendered via JS -->
           </ul>
         </div>
       </section>
     </main>
-    <aside>
-      <!-- TODO: Add linkedin and other contact details. -->
-    </aside>
+    <footer>
+      Made by Kunal Dewan :)
+      <br />
+      Find me on
+      <a
+        href="https://www.linkedin.com/in/kunal-dewan-bb0a67161"
+        target="_blank"
+        >LinkedIn</a
+      >
+    </footer>
+    <div hidden="true" class="prompts__loading-toast"></div>
+    <div hidden="true" class="prompts__error-toast"></div>
     <script type="module" src="main.js"></script>
   </body>
 </html>

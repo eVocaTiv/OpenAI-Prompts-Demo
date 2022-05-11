@@ -11,20 +11,21 @@ const throttledOnFormSubmit = throttleDecorator(onFormSubmit, 300); // throttle 
 
 function onFormSubmit() {
   const prompt = viewElements.textArea.value;
-  // Ignore empty input (or show a toast to inform user.)
-  if (prompt.trim().length === 0) return;
+  onResponseLoading();
 
   fetchPromptResponse(prompt)
     .then((response) => {
       addPromptResponse(prompt, response);
       updateResponseInLocalStorage(prompt, response.choices[0].text);
     })
-    .catch((err) => console.error("there is an error", err)); // TODO change to graceful handling.
-}
+    .catch((err) => {console.error("there is an error", err); onApiError(err)})
+    .finally(onResponseLoaded);
+  }
 
 function onQuickPromptClick(ev) {
   const prompt = ev.target.closest(".prompts__form__quick-prompt");
-  prompt &&
+  onResponseLoading();
+  prompt && 
     fetchPromptResponse(prompt.textContent)
       .then((response) => {
         addPromptResponse(prompt.textContent, response);
@@ -33,7 +34,23 @@ function onQuickPromptClick(ev) {
           response.choices[0].text
         );
       })
-      .catch((err) => console.error("there is an error", err)); // TODO change to graceful handling.
+      .catch((err) => {console.error("there is an error", err); onApiError(err)})
+      .finally(onResponseLoaded);
+}
+
+function onResponseLoading() {
+  viewElements.loadingToast.hidden = false;
+}
+
+function onResponseLoaded() {
+  viewElements.loadingToast.hidden = true;
+}
+
+function onApiError(err) {
+  viewElements.errorToast.hidden = false;
+  setTimeout(() => {
+    viewElements.errorToast.hidden = true;
+  }, 3000);
 }
 
 // Initialize app once using IIFE.

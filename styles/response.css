@@ -1,13 +1,18 @@
 .prompts__responses-container {
-  margin-top: 5vh;
+  margin-top: 5vh;  
+}
+
+.prompts__responses {
+  padding: 0; 
 }
 
 .prompts__response {
-  background-color: var(--whiteBG);
+  background-color: var(--beigeBG);
   list-style: none;
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
+  transition: background-color 0.6s ease;
 }
 
 .prompts__response__content {

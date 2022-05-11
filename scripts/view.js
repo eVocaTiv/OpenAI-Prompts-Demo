@@ -5,6 +5,8 @@ const viewElements = {
   quickPrompts: document.querySelector(".prompts__form__quick-prompts"),
   textArea: document.querySelector(".prompts__form__input"),
   responsesClearBtn: document.querySelector(".prompts__responses__clear-btn"),
+  errorToast: document.querySelector(".prompts__error-toast"),
+  loadingToast: document.querySelector(".prompts__loading-toast "),
 };
 
 function addPromptResponse(promptText, { choices }) {
@@ -22,8 +24,10 @@ function addPromptResponse(promptText, { choices }) {
   responseContent.classList.add("prompts__response__content");
 
   newResponse.append(promptContent, responseContent);
-
   viewElements.responses.prepend(newResponse);
+  setTimeout(() => {
+    newResponse.style.backgroundColor="whitesmoke";
+  }, 500)
 }
 
 export { viewElements, addPromptResponse };

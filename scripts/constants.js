@@ -6,6 +6,6 @@ const apiConstants = {
   presence_penalty: 0.0,
 };
 
-const key = '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';
+const key = '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';
 
 export { apiConstants, key };
