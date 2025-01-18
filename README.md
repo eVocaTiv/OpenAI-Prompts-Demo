@@ -1,6 +1,3 @@
-### Welcome! 
-This is my attempt of the Front End Developer Intern Challenge based on fetching data from OpenAI's GPT-3.
-
 ### Features & Notes
 - Responses to prompts are displayed in a new-first order with background color transition depicting that.
 - The client side HTML is accessible using native tags, aria attributes and appropriate focus indicators wherever useful, making it easy to use through screen reader and boosting SEO stats.
